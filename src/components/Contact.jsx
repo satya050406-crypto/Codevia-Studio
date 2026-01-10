@@ -17,14 +17,14 @@ const Contact = () => {
                                 <div className="glass" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyCenter: 'center', fontSize: '1.2rem' }}>📧</div>
                                 <div>
                                     <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Email Us</p>
-                                    <p style={{ fontWeight: '600' }}>hello@codevia.studio</p>
+                                    <p style={{ fontWeight: '600' }}>codeviastudio6@gmail.com</p>
                                 </div>
                             </div>
                             <div style={{ display: 'flex', alignItems: 'center', gap: '1rem' }}>
                                 <div className="glass" style={{ width: '50px', height: '50px', display: 'flex', alignItems: 'center', justifyCenter: 'center', fontSize: '1.2rem' }}>📞</div>
                                 <div>
                                     <p style={{ fontSize: '0.8rem', color: 'var(--text-muted)' }}>Call Us</p>
-                                    <p style={{ fontWeight: '600' }}>+1 (234) 567-890</p>
+                                    <p style={{ fontWeight: '600' }}>+91 9211396141</p>
                                 </div>
                             </div>
                             <a href="https://wa.me/919211396141" className="btn btn-primary" style={{ marginTop: '1rem' }}>

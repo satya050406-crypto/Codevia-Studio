@@ -52,8 +52,8 @@ const ServiceDetailPage = () => {
                                         <h3 style={{ fontSize: '1.5rem', marginBottom: '1rem' }}>{project.title}</h3>
                                         <p style={{ color: 'var(--text-muted)', fontSize: '1rem', marginBottom: '2rem', lineHeight: '1.6' }}>{project.description}</p>
                                         <div style={{ marginTop: 'auto' }}>
-                                            <a href={project.link} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%' }}>
-                                                {service.ctaText}
+                                            <a href={project.button_url} target="_blank" rel="noopener noreferrer" className="btn btn-primary" style={{ width: '100%' }}>
+                                                {project.button_text}
                                             </a>
                                         </div>
                                     </div>
