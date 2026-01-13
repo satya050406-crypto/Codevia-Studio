@@ -39,22 +39,6 @@ export const projectsData = [
         button_url: "https://cbs-tax.vercel.app/"
     },
     {
-        title: "Logistic Tracker",
-        serviceId: "website-development",
-        image: "/cbs-logistics.png",
-        description: "Advanced shipment tracking system with real-time updates and logistics management.",
-        button_text: "View Live Website",
-        button_url: "#"
-    },
-    {
-        title: "CBS Business Suite",
-        serviceId: "website-development",
-        image: "/website.png",
-        description: "Integrated admin panel and management tools for streamlined business operations.",
-        button_text: "View Live Website",
-        button_url: "#"
-    },
-    {
         title: "Fintech Pro App",
         serviceId: "app-development",
         image: "/app.png",
@@ -77,50 +61,86 @@ export const projectsData = [
         description: "Engaging social media creatives for a new tech product launch.",
         button_text: "View Post",
         button_url: "#"
+    },
+    {
+        title: "Movers & Packers Creative",
+        serviceId: "creative-services",
+        image: "/movers-flyer.png",
+        description: "Eye-catching social media flyer for a logistics service provider.",
+        button_text: "View Design",
+        button_url: "#"
+    },
+    {
+        title: "Beauty Salon Branding",
+        serviceId: "creative-services",
+        image: "/beauty-salon-flyer.png",
+        description: "Luxury beauty salon promotional design featuring service highlights.",
+        button_text: "View Design",
+        button_url: "#"
     }
 ];
 
 export const seoPackages = [
     {
-        title: "Basic Package",
-        price: "$299/mo",
-        description: "Essential SEO for small businesses to start ranking.",
+        title: "BASIC SEO PLAN",
+        price: "₹5,000",
         features: [
-            "Keyword Research (5 Keywords)",
+            "Keyword Research (Up to 10)",
             "On-Page Optimization",
-            "Basic Traffic Report",
-            "Google My Business Setup"
+            "Basic Technical SEO",
+            "Monthly SEO Report",
+            "Delivery: 15 Days"
         ],
         button_text: "Get Started",
-        button_url: "/contact"
+        button_url: "/contact",
+        recommended: false
     },
     {
-        title: "Standard Package",
-        price: "$599/mo",
-        description: "Advanced growth strategies for expanding businesses.",
+        title: "STANDARD SEO PLAN",
+        price: "₹8,000",
         features: [
-            "Keyword Research (15 Keywords)",
-            "Technical SEO Audit",
-            "Content Strategy",
-            "Backlink Building (High Quality)",
-            "Monthly Performance Report"
+            "Keyword Research (Up to 20)",
+            "Full On-Page Optimization",
+            "Technical SEO Fixes",
+            "Backlink Building (Starter)",
+            "Monthly SEO Insights Report",
+            "Delivery: 20 Days"
         ],
-        button_text: "Choose Standard",
-        button_url: "/contact"
+        button_text: "Get Started",
+        button_url: "/contact",
+        recommended: false
     },
     {
-        title: "Premium Package",
-        price: "$999/mo",
-        description: "Complete dominance for competitive markets.",
+        title: "GOLD SEO PLAN",
+        price: "₹15,000",
         features: [
-            "Unlimited Keyword Tracking",
-            "Comprehensive Link Building",
-            "Conversion Rate Optimization",
-            "Dedicated Account Manager",
-            "Weekly Reporting & Strategy Calls"
+            "Advanced Keyword Research (Up to 35)",
+            "Full On-Page Optimization",
+            "Advanced Technical SEO",
+            "High-Quality Backlink Strategy",
+            "Competitor Analysis",
+            "Monthly Growth + Reporting",
+            "Delivery: 25 Days"
         ],
-        button_text: "Go Premium",
-        button_url: "/contact"
+        button_text: "Get Started",
+        button_url: "/contact",
+        recommended: true
+    },
+    {
+        title: "PREMIUM SEO PLAN",
+        price: "₹21,000",
+        features: [
+            "Enterprise Keyword Research (50+)",
+            "Full On-Page + Advanced Technical SEO",
+            "High Authority Backlinks",
+            "Content Optimization + Strategy",
+            "Competitor Tracking & Reporting",
+            "Monthly SEO Consulting",
+            "Delivery: 30 Days"
+        ],
+        button_text: "Get Started",
+        button_url: "/contact",
+        recommended: false
     }
 ];
 
@@ -156,5 +176,21 @@ export const socialMediaCreatives = [
         creative_image: "/app.png", // Using existing placeholder
         category: "Restaurant",
         posted_date: "Jan 03, 2026"
+    },
+    {
+        id: 5,
+        title: "Movers & Packers Service",
+        description: "Professional flyer emphasizing speed and safety for relocation services.",
+        creative_image: "/movers-flyer.png",
+        category: "Logistics",
+        posted_date: "Jan 14, 2026"
+    },
+    {
+        id: 6,
+        title: "The Makeover Place",
+        description: "Elegant beauty salon flyer featuring haircare and spa services.",
+        creative_image: "/beauty-salon-flyer.png",
+        category: "Beauty & Wellness",
+        posted_date: "Jan 15, 2026"
     }
 ];

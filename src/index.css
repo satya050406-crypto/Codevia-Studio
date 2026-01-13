@@ -32,6 +32,57 @@ body {
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  background-image:
+    linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
+  background-size: 50px 50px;
+  position: relative;
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, var(--primary-color), transparent);
+  opacity: 0.2;
+  z-index: 9999;
+  animation: scanline 8s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes scanline {
+  0% {
+    top: -10%;
+  }
+
+  100% {
+    top: 110%;
+  }
+}
+
+.tech-blob {
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  background: var(--primary-glow);
+  filter: blur(80px);
+  border-radius: 50%;
+  z-index: -1;
+  opacity: 0.3;
+  animation: float 20s infinite alternate;
+}
+
+@keyframes float {
+  0% {
+    transform: translate(0, 0);
+  }
+
+  100% {
+    transform: translate(100px, 100px);
+  }
 }
 
 h1,
@@ -65,6 +116,13 @@ button {
   -webkit-backdrop-filter: blur(12px);
   border: 1px solid var(--glass-border);
   border-radius: 16px;
+  transition: var(--transition);
+}
+
+.glass:hover {
+  border-color: var(--primary-color);
+  box-shadow: 0 0 20px var(--primary-glow);
+  transform: translateY(-5px);
 }
 
 .container {
@@ -94,6 +152,47 @@ section {
   animation: fadeInUp 0.8s ease-out forwards;
 }
 
+/* Scroll Animations */
+.reveal-text {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.5s ease-out, transform 0.5s ease-out;
+  will-change: opacity, transform;
+}
+
+.reveal-text.active {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reveal-title {
+  opacity: 0;
+  transform: translateY(30px);
+  letter-spacing: 0.3px;
+  transition: opacity 0.45s cubic-bezier(0.215, 0.61, 0.355, 1),
+    transform 0.45s cubic-bezier(0.215, 0.61, 0.355, 1),
+    letter-spacing 0.45s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform, letter-spacing;
+}
+
+.reveal-title.active {
+  opacity: 1;
+  transform: translateY(0);
+  letter-spacing: 0;
+}
+
+.reveal-card {
+  opacity: 0;
+  transform: scale(0.95) translateY(20px);
+  transition: opacity 0.5s cubic-bezier(0.215, 0.61, 0.355, 1), transform 0.5s cubic-bezier(0.215, 0.61, 0.355, 1);
+  will-change: opacity, transform;
+}
+
+.reveal-card.active {
+  opacity: 1;
+  transform: scale(1) translateY(0);
+}
+
 /* Gradient Text */
 .gradient-text {
   background: linear-gradient(90deg, var(--primary-color), var(--secondary-color));
@@ -112,6 +211,74 @@ section {
   align-items: center;
   justify-content: center;
   gap: 0.5rem;
+}
+
+/* Hero Animations */
+@keyframes heroFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes heroScaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.hero-headline {
+  animation: heroFadeInUp 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+}
+
+.hero-text {
+  opacity: 0;
+  animation: heroFadeInUp 0.6s cubic-bezier(0.215, 0.61, 0.355, 1) 0.2s forwards;
+}
+
+.hero-cta {
+  opacity: 0;
+  animation: heroScaleIn 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) 0.3s forwards;
+}
+
+@keyframes heroBgFade {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 0.6;
+    /* Subtle */
+  }
+}
+
+.hero-bg-glow {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 1000px;
+  height: 1000px;
+  background: radial-gradient(circle, var(--primary-glow) 0%, transparent 70%);
+  z-index: -1;
+  pointer-events: none;
+  animation: heroBgFade 2s ease-out forwards;
+}
+
+.hero-section {
+  position: relative;
+  overflow: hidden;
 }
 
 .btn-primary {

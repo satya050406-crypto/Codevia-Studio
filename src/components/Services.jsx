@@ -1,4 +1,5 @@
 import React from 'react';
+import RevealTitle from './RevealTitle';
 
 const Services = () => {
     const services = [
@@ -27,9 +28,11 @@ const Services = () => {
     return (
         <section id="services" className="services-section">
             <div className="container">
-                <h2 style={{ fontSize: '2.5rem', textAlign: 'center', marginBottom: '4rem' }} className="animate">
-                    Our <span className="gradient-text">Services</span>
-                </h2>
+                <RevealTitle style={{ marginBottom: '4rem', textAlign: 'center' }}>
+                    <h2 style={{ fontSize: '2.5rem' }}>
+                        Our <span className="gradient-text">Services</span>
+                    </h2>
+                </RevealTitle>
                 <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(280px, 1fr))', gap: '2rem' }}>
                     {services.map((service, index) => (
                         <div key={index} className="glass animate" style={{ padding: '2.5rem', transition: 'var(--transition)' }}>

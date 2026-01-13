@@ -1,18 +1,21 @@
 import React from 'react';
+import RevealTitle from './RevealTitle';
 
 const About = () => {
     return (
         <section id="about" className="about-section">
             <div className="container">
                 <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '4rem', alignItems: 'center' }}>
-                    <div className="animate">
-                        <h2 style={{ fontSize: '2.5rem', marginBottom: '1.5rem' }}>
-                            We Build The <span className="gradient-text">Future</span> of Digital Business
-                        </h2>
-                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem' }}>
+                    <div>
+                        <RevealTitle style={{ marginBottom: '1.5rem' }}>
+                            <h2 style={{ fontSize: '2.5rem' }}>
+                                We Build The <span className="gradient-text">Future</span> of Digital Business
+                            </h2>
+                        </RevealTitle>
+                        <p style={{ color: 'var(--text-muted)', marginBottom: '1.5rem', fontSize: '1.1rem' }} className="animate">
                             Codevia Studio is a premier digital agency dedicated to transforming brands through high-performance technology and stunning design.
                         </p>
-                        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }}>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '1.1rem' }} className="animate">
                             Our mission is to help businesses grow by delivering quality, speed, and modern solutions that stand out in today's competitive landscape.
                         </p>
                     </div>
