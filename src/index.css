@@ -31,6 +31,9 @@ body {
   overflow-x: hidden;
   width: 100%;
   position: relative;
+  touch-action: pan-y;
+  /* Disable horizontal swipes/zoom gestures */
+  -webkit-overflow-scrolling: touch;
   background-image:
     linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
@@ -38,7 +41,9 @@ body {
 }
 
 .app {
-  overflow-x: hidden;
+  overflow: hidden;
+  /* Fully lock horizontal and allow standard vertical scroll */
+  overflow-y: visible;
   width: 100%;
   position: relative;
 }
