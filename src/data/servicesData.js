@@ -39,14 +39,6 @@ export const projectsData = [
         button_url: "https://cbs-tax.vercel.app/"
     },
     {
-        title: "Fintech Pro App",
-        serviceId: "app-development",
-        image: "/app.png",
-        description: "Modern banking experience with high-security features and intuitive UI.",
-        button_text: "View Live App",
-        button_url: "#"
-    },
-    {
         title: "Brand Identity: CBS",
         serviceId: "creative-services",
         image: "/branding.png",

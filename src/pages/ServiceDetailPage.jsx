@@ -23,6 +23,7 @@ const ServiceDetailPage = () => {
 
     const serviceProjects = projectsData.filter(p => p.serviceId === serviceId);
     const isSeoPage = serviceId === 'seo-marketing';
+    const isAppPage = serviceId === 'app-development';
 
     return (
         <div style={{ paddingTop: '120px', background: 'var(--bg-color)', minHeight: '100vh' }}>
@@ -114,6 +115,18 @@ const ServiceDetailPage = () => {
                                     </a>
                                 </div>
                             ))}
+                        </div>
+                    </div>
+                ) : isAppPage ? (
+                    <div className="glass animate" style={{ padding: '6rem 2rem', textAlign: 'center', border: '1px solid var(--glass-border)', borderRadius: '24px' }}>
+                        <h2 style={{ fontSize: '3.5rem', marginBottom: '1.5rem' }}>
+                            COMING <span className="gradient-text">SOON</span>
+                        </h2>
+                        <p style={{ color: 'var(--text-muted)', fontSize: '1.2rem', maxWidth: '600px', margin: '0 auto' }}>
+                            We are currently engineering high-performance mobile experiences. Premium iOS and Android applications are in development.
+                        </p>
+                        <div style={{ marginTop: '3rem' }}>
+                            <a href="https://wa.me/919211396141" className="btn btn-primary">Get Notified</a>
                         </div>
                     </div>
                 ) : (
