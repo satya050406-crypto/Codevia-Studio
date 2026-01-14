@@ -8,6 +8,19 @@ const Hero = () => {
             <div className="hero-bg-glow" />
             <div className="container">
                 <div>
+                    <div className="glass reveal-card" style={{
+                        display: 'inline-flex',
+                        alignItems: 'center',
+                        gap: '0.8rem',
+                        padding: '0.5rem 1.2rem',
+                        borderRadius: '100px',
+                        marginBottom: '2rem',
+                        border: '1px solid var(--primary-glow)',
+                        background: 'rgba(0, 210, 255, 0.05)'
+                    }}>
+                        <span style={{ color: 'var(--primary-color)', fontSize: '1.2rem' }}>⭐</span>
+                        <span style={{ fontSize: '0.85rem', fontWeight: '600', letterSpacing: '1px', textTransform: 'uppercase' }}>100% Client Satisfaction Box</span>
+                    </div>
                     <h1 className="hero-headline" style={{ fontSize: 'clamp(2.5rem, 8vw, 4.5rem)', lineHeight: '1.1', marginBottom: '1.5rem' }}>
                         <HackerText text="Turning Code" /> into <span className="gradient-text"><HackerText text="Growth" /></span>
                     </h1>

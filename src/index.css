@@ -369,7 +369,22 @@ section {
   color: var(--primary-color);
 }
 
+.about-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+  .about-grid {
+    grid-template-columns: 1fr;
+    gap: 3rem;
+    text-align: center;
+  }
+}
+
 @media (max-width: 768px) {
   .nav-links {
     display: none;
