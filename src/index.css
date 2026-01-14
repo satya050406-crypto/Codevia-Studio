@@ -22,20 +22,24 @@
   box-sizing: border-box;
 }
 
-html {
-  scroll-behavior: smooth;
-}
-
+html,
 body {
   background-color: var(--bg-color);
   color: var(--text-main);
   font-family: var(--font-main);
   line-height: 1.6;
   overflow-x: hidden;
+  width: 100%;
+  position: relative;
   background-image:
     linear-gradient(rgba(0, 210, 255, 0.03) 1px, transparent 1px),
     linear-gradient(90deg, rgba(0, 210, 255, 0.03) 1px, transparent 1px);
   background-size: 50px 50px;
+}
+
+.app {
+  overflow-x: hidden;
+  width: 100%;
   position: relative;
 }
 
@@ -51,6 +55,12 @@ body::after {
   z-index: 9999;
   animation: scanline 8s linear infinite;
   pointer-events: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
 }
 
 @keyframes scanline {
