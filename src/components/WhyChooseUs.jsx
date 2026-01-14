@@ -49,6 +49,17 @@ const WhyChooseUs = () => {
                     <path d="M8 12L11 15L16 9" stroke="url(#blue-gradient)" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round" />
                 </svg>
             )
+        },
+        {
+            title: "100% Satisfaction",
+            description: "We don't just deliver projects; we ensure every client is 100% satisfied with the result.",
+            isFeatured: true,
+            icon: (
+                <svg width="48" height="48" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M12 15L8.5 17.5L9.5 13.5L6.5 10.5L10.5 10.25L12 6.5L13.5 10.25L17.5 10.5L14.5 13.5L15.5 17.5L12 15Z" fill="url(#blue-gradient)" stroke="#fff" strokeWidth="1" />
+                    <circle cx="12" cy="12" r="10" stroke="url(#blue-gradient)" strokeWidth="1.5" strokeDasharray="4 4" />
+                </svg>
+            )
         }
     ];
 
@@ -94,11 +105,14 @@ const WhyChooseUs = () => {
                     {reasons.map((reason, index) => (
                         <div
                             key={index}
-                            className="reveal-card"
+                            className={`reveal-card ${reason.isFeatured ? 'glass' : ''}`}
                             style={{
                                 padding: '2rem',
                                 textAlign: 'center',
-                                transitionDelay: `${index * 200}ms` // Staggered delay
+                                transitionDelay: `${index * 200}ms`, // Staggered delay
+                                border: reason.isFeatured ? '1px solid var(--primary-color)' : 'none',
+                                boxShadow: reason.isFeatured ? '0 0 30px var(--primary-glow)' : 'none',
+                                borderRadius: '16px'
                             }}
                         >
                             <div style={{ fontSize: '3rem', marginBottom: '1.5rem' }}>{reason.icon}</div>
